@@ -1,0 +1,31 @@
+/* pages/home/childCpns/w-recommend/w-recommend.wxss */
+
+.recommend {
+  display: flex;
+  margin-top: 40rpx;
+  /* margin-left: 10rpx; */
+  /* margin-right: 10rpx; */
+  padding-bottom: 80rpx;
+  border-bottom: 16rpx solid #eee;
+}
+
+.recommend-item {
+  flex: 1;
+  margin-left: 14rpx;
+  margin-right: 14rpx;
+  width: 167.5rpx;
+  height: 167.5rpx;
+}
+
+.recommend-item image {
+  /* margin-left: 10rpx; */
+  width: 160rpx;
+  height: 160rpx;
+}
+.recommend-item view {
+  text-align: center;
+}
+
+.recommend-item text {
+  font-size: 30rpx;
+}

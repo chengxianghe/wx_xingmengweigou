@@ -1,0 +1,11 @@
+<!--pages/home/childCpns/w-recommend/w-recommend.wxml-->
+<view class="recommend">
+  <block wx:for="{{recommends}}" wx:key="{{index}}" wx:for-item="recommendItem">
+    <view class="recommend-item">
+      <view>
+        <image src="{{recommendItem.image}}" mode="aspectFill"/>
+        <text>{{recommendItem.title}}</text>
+      </view>
+    </view>
+  </block>
+</view>

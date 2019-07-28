@@ -2,3 +2,6 @@
 
 <!-- 展示轮播图 -->
 <w-swiper list="{{banners}}" swiper-container="swiper-container"/>
+
+<!-- 推荐数据 -->
+<w-recommend recommends="{{recommends}}"/>
