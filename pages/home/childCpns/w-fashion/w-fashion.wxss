@@ -1,0 +1,7 @@
+/* pages/home/childCpns/w-fashion/w-fashion.wxss */
+/* 740 × 543 */
+.recommend-image {
+  margin: 5rpx;
+  width: 740rpx;
+  height: 543rpx;
+}

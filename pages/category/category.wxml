@@ -1,2 +1,5 @@
 <!--pages/category/category.wxml-->
 <text>pages/category/category.wxml</text>
+
+<!-- titles -->
+<w-tab-control titles="{{['星期一','星期二','星期三']}}"/>

@@ -1,7 +1,22 @@
 <!--pages/home/home.wxml-->
 
+<view hidden='{{!showTabControl}}'>
+    <w-tab-control class='tab-control-temp' 
+                 titles="{{titles}}" 
+                 bind:tapClick="tabClick"/>
+</view>
+
 <!-- 展示轮播图 -->
 <w-swiper list="{{banners}}" swiper-container="swiper-container"/>
 
 <!-- 推荐数据 -->
 <w-recommend recommends="{{recommends}}"/>
+
+<!-- 本周推荐 -->
+<w-fashion/>
+
+<!-- titles -->
+<w-tab-control titles="{{titles}}" bind:tapClick="tabClick"/>
+
+<!-- goods -->
+<w-goods goodsList="{{goods[currentType].list}}"/>

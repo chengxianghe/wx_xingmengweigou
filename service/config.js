@@ -1,5 +1,2 @@
-const baseURL = "http://123.207.32.32:8000"
-
-export {
-  baseURL
-}
+export const baseURL = "http://123.207.32.32:8000"
+export const timeOut = 5000

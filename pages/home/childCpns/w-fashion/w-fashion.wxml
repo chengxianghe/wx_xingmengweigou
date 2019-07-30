@@ -1,0 +1,4 @@
+<!--pages/home/childCpns/w-fashion/w-fashion.wxml-->
+<view>
+  <image class="recommend-image" src="/assets/images/home/recommend_bg.jpg" mode="widthFixed"/>
+</view>
