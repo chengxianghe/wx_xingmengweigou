@@ -8,38 +8,33 @@ Component({
       type: Array,
       value: []
     },
-
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    currendIndex: 0
-
+    currentIndex: 0
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-    itemClick: function(data) {
-      const index = data.currentTarget.dataset.index
-      console.log(index)
-
+    itemClick(e) {
+      // 1.设置最新的index
       this.setData({
-        currentIndex: index
+        currentIndex: e.currentTarget.dataset.index
       })
 
-      //发出事件
-      this.triggerEvent("tabClick", index, {})
+      // 2.发出时间
+      const data = { index: this.data.currentIndex }
+      this.triggerEvent("tabclick", data, {})
     },
-
     setCurrentIndex(index) {
       console.log(index)
-
       this.setData({
-        currendIndex: index
+        currentIndex: index
       })
     }
   }

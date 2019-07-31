@@ -10,7 +10,7 @@ import {
   SELL,
   NEW,
   BACK_TOP_POSITION
-} from '../../commen/const.js'
+} from '../../common/const.js'
 
 Page({
 
@@ -31,7 +31,8 @@ Page({
     topPosition: 0,
     tabControlTop: 0,
     showBackTop: false,
-    showTabControl: false
+    showTabControl: false,
+    imageLoad: false
   },
 
   /**
@@ -41,6 +42,12 @@ Page({
 
     // 1. 请求数据
     this._getData()
+  },
+
+  loadMore: function () {
+    console.log("loadMore")
+
+    this._getProductData(this.data.currentType);
   },
 
   _getData: function () {
@@ -90,9 +97,14 @@ Page({
     })
   },
 
+  onPageScroll: function (res) {
+    // console.log(res)
+  },
+
   tabClick: function (e) {
     let currentType = ''
     const index = e.detail.index
+    console.log(e)
     switch (index) {
       case 0:
       currentType = POP
@@ -109,30 +121,50 @@ Page({
       currentType: currentType
     })
 
-    console.log(this.selectComponent('.tab-control'))
     this.selectComponent('.tab-control').setCurrentIndex(index)
     this.selectComponent('.tab-control-temp').setCurrentIndex(index)
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  onBackTop: function () {
+    // wx.pageScrollTo({
+    //   scrollTop: 0,
+    //   duration: 0
+    // })
+    console.log("onBackTop")
 
+    this.setData({
+      showBackTop: false,
+      topPosition: 0,
+      tabControlTop: 0
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  onImageLoad: function () {
+    if (this.data.imageLoad == false) {
+      console.log("onImageLoad")
+      this.data.imageLoad = true
+      wx.createSelectorQuery().select('.tab-control').boundingClientRect((rect) => {
+        this.setData({
+          tabControlTop: rect.top
+        })
+      }).exec()
+    }
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
+  scrollPosition: function (e) {
+    // 1.获取滚动的顶部
+    const position = e.detail.scrollTop;
+    // 2.设置是否显示
+    this.setData({
+      showBackTop: position > BACK_TOP_POSITION,
+    })
 
+    wx.createSelectorQuery().select('.tab-control').boundingClientRect((rect) => {
+      const show = rect.top > 0
+      this.setData({
+        showTabControl: !show
+      })
+    }).exec()
   },
 
   /**
