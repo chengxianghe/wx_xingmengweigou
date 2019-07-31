@@ -15,7 +15,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  border: 5rpx;
+  bottom: 5rpx;
 }
 
 .title {

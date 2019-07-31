@@ -1,0 +1,12 @@
+<!--pages/profile/childCpns/w-list-view/w-list-view.wxml-->
+<view class="list-view">
+  <block wx:for="{{list}}" wx:key="index" wx:for-item="section">
+    <view class="list-section">
+      <block wx:for="{{section}}" wx:key="index">
+        <view class="item">
+          <w-list-item row="{{item}}" />
+        </view>
+      </block>
+    </view>
+  </block>
+</view>

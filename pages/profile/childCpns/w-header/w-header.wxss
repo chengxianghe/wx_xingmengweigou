@@ -1,0 +1,22 @@
+/* pages/profile/childCpns/w-header/w-header.wxss */
+
+.header {
+  background: #ff5777;
+}
+.content {
+  padding-top: 120rpx;
+  height: 250rpx;
+    /* display: flex; */
+}
+
+.content text {
+  color: #fff;
+  height: 250rpx;
+    /* display: flex; */
+}
+.header-icon {
+  /* background: #eee; */
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 75rpx;
+}

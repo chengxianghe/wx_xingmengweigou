@@ -1,0 +1,6 @@
+<!--pages/profile/childCpns/w-list-item/w-list-item.wxml-->
+
+<view class="list-item">
+  <image src="{{row.icon}}" mode="widthFix"></image>
+  <text>{{row.title}}</text>
+</view>

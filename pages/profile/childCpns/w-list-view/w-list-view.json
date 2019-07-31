@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "w-list-item": "/pages/profile/childCpns/w-list-item/w-list-item"
+  }
+}

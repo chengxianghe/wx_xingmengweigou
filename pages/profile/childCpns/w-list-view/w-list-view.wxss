@@ -1,0 +1,18 @@
+/* pages/profile/childCpns/w-list-view/w-list-view.wxss */
+.list-view {
+  background: #fff;
+}
+
+.list-section {
+  border-top: 40rpx solid #f8f8f8;
+}
+
+.list-section .item {
+  padding: 16rpx 0;
+  margin-left: 30rpx;
+  border-bottom: 1px solid #f8f8f8;
+}
+
+.item:last-child {
+  border-bottom: none;
+}

@@ -7,8 +7,11 @@
   padding: 8rpx;
 }
 
-.goods-item {
+.goods > .goods-item {
   position: relative;
+}
+
+.goods > .goods-item {
   width: 48%;
   margin-top: 20rpx;
 }

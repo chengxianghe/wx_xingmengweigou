@@ -1,2 +1,5 @@
 <!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<view class="profile">
+  <w-header/>
+  <w-list-view list="{{list}}"/>
+</view>
