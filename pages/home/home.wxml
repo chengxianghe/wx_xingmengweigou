@@ -2,15 +2,14 @@
 
 <view class="home">
   <view hidden='{{!showTabControl}}'>
-    <w-tab-control class='tab-control-temp' 
-                 titles="{{titles}}" 
-                 bind:tabclick="tabClick"/>
+    <w-tab-control class='tab-control-temp' titles="{{titles}}" bind:tabclick="tabClick"/>
   </view>
 
   <scroll-view class='content' 
               scroll-y 
               bindscrolltolower="loadMore"
-              scroll-with-animation="true"
+              scroll-with-animation
+              enable-back-to-top
               scroll-top="{{topPosition}}"
               bindscroll="scrollPosition">
     <!-- 展示轮播图 -->
@@ -23,7 +22,7 @@
     <w-fashion/>
 
     <!-- titles -->
-    <w-tab-control class="tab-control" titles="{{titles}}" bind:tapclick="tabClick" />
+    <w-tab-control class="tab-control" titles="{{titles}}" bind:tabclick="tabClick" />
 
     <!-- goods -->
     <w-goods goodsList="{{goods[currentType].list}}" />

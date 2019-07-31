@@ -27,7 +27,7 @@ Page({
       [NEW]: { page: 1, list: [] },
     },
 
-    currentType: [POP],
+    currentType: POP,
     topPosition: 0,
     tabControlTop: 0,
     showBackTop: false,
@@ -47,7 +47,7 @@ Page({
   loadMore: function () {
     console.log("loadMore")
 
-    this._getProductData(this.data.currentType);
+    this._getGoodsData(this.data.currentType);
   },
 
   _getData: function () {
