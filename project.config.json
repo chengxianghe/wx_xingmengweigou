@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -62,6 +62,12 @@
 					"name": "pages/profile/profile",
 					"pathName": "pages/profile/profile",
 					"query": "我的",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "flex",
+					"pathName": "pages/flex/flex",
 					"scene": null
 				}
 			]

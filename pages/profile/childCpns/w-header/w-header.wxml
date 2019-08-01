@@ -1,17 +1,19 @@
 <!--pages/profile/childCpns/w-header/w-header.wxml-->
 
 <view class="header">
-  <view class="content">
-    <image class="header-icon" src="/assets/images/profile/avatar.png"></image>
-    <view class="">
-      <text class="register">登录/注册</text>
-      <view>
-        <image src="/assets/images/profile/phone.png"></image>
+  <view class="header-content">
+    <image class="header-icon" src="/assets/images/profile/avatar.png" mode="widthFix"></image>
+
+    <view class="register-content">
+      <text>登录/注册</text>
+
+      <view class="bind">
+        <image src="/assets/images/profile/phone.png" mode="widthFix"></image>
         <text>暂无绑定手机号</text>
       </view>
-      <view>
-        <image src="/assets/images/common/arrow-right.png"></image>
-      </view>
     </view>
+  </view>
+  <view class="arrow">
+    <image src="/assets/images/common/arrow-right.png" mode="widthFix"></image>
   </view>
 </view>

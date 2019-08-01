@@ -2,21 +2,62 @@
 
 .header {
   background: #ff5777;
-}
-.content {
-  padding-top: 120rpx;
-  height: 250rpx;
-    /* display: flex; */
+  height: 250rpx;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.content text {
-  color: #fff;
-  height: 250rpx;
-    /* display: flex; */
+.header-content {
+  display: flex;
+  margin: 40rpx;
 }
+
 .header-icon {
-  /* background: #eee; */
+  /* justify-content: flex-start; */
   width: 150rpx;
-  height: 150rpx;
   border-radius: 75rpx;
+  background: #eee;
+}
+
+.register-content {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* 
+添加伪类实现类似 justify-content: space-evenly 的功能（平分间距）
+ */
+.register-content:before, .register-content:after {
+  content: '';
+}
+
+.register-content text {
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.bind {
+  display: flex;
+  /* justify-content: flex-start; */
+}
+
+.bind image {
+  width: 40rpx;
+  margin-left: -5rpx;
+}
+
+.arrow {
+  width: 100rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20rpx;
+}
+.arrow image {
+  width: 50rpx;
 }

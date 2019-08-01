@@ -1,0 +1,179 @@
+/* pages/flex/flex.wxss */
+
+.box1 {
+  height: 400rpx;
+  width: 100%;
+  background: red;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* .box1 .item {
+  width: calc(25% - 3rpx);
+  line-height: 80rpx;
+  float: left;
+  background: yellow;
+  text-align: center;
+  border: 1rpx solid #ddd;
+} */
+
+.box1 .item {
+  background: yellow;
+  border: 1rpx solid #ddd;
+  text-align: center;
+  box-sizing: border-box;
+  width: 20%;
+  align-self: flex-start;
+  /* flex: 1; */
+  flex-grow: 1;
+
+}
+
+.box1 .item100 {
+  order: -1;
+}
+
+
+
+
+
+.box2 {
+  margin-top: 150rpx;
+  height: 400rpx;
+  width: 100%;
+  background: orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box2 .item {
+  margin: 40rpx;
+  background: yellow;
+  border: 1rpx solid #ddd;
+  text-align: center;
+  display: flex;
+}
+
+.box2 .textItem1 {
+  height: 40%;
+  border: 1rpx solid #fff;
+  background: rgb(197, 33, 170);
+  color: #fff;
+  align-self: center;
+}
+
+.box2 .textItem2 {
+  border: 1rpx solid #fff;
+  background: #15f;
+  color: #fff;
+}
+
+.textItem2-item {
+  border: 1rpx solid #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.arrow {
+  width: 100rpx;
+  height: 100rpx;
+  border: 1rpx solid #fff;
+  background: rgb(219, 138, 182);
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.arrow text {
+  border: 1rpx solid #fff;
+  background: orange;
+  color: #fff;
+}
+
+/* 
+flex 布局
+6个容器属性
+
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content
+
+
+////////////////////////////////////////
+justify-content: 子元素水平排列方式
+
+flex-start 居左对齐
+flex-end 居右对齐
+center 居中
+space-between 两端对齐
+space-around 子元素拉手分布
+ 
+////////////////////////////////////////
+align-items: 子元素垂直排列方式
+
+center 居中
+flex-start 顶部对齐
+flex-end 底部对齐
+stretch （默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度
+baseline 项目的第一行文字的基线对齐
+ 
+////////////////////////////////////////
+flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
+
+flex-direction属性决定主轴的方向（即项目的排列方向）。
+row（默认值）：主轴为水平方向，起点在左端。
+row-reverse：主轴为水平方向，起点在右端。
+column：主轴为垂直方向，起点在上沿。
+column-reverse：主轴为垂直方向，起点在下沿。
+
+flex-wrap
+（1）nowrap（默认）：不换行。
+（2）wrap：换行，第一行在上方。
+（3）wrap-reverse：换行，第一行在下方。
+默认情况下，项目都排在一条线（又称"轴线"）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。
+
+
+align-content属性
+align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
+align-content: flex-start | flex-end | center | space-between | space-around | stretch(默认);
+
+*/
+
+/* 
+项目的属性
+以下6个属性设置在项目上。
+
+order
+flex-grow
+flex-shrink
+flex-basis
+flex
+align-self
+
+////////////////////////////////////////////////
+flex: 1;
+子元素在父元素中均分宽度，与自己的宽度无关了
+
+flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。
+
+flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大
+flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小
+flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
+
+////////////////////////////////////////////////
+order
+属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+
+////////////////////////////////////////////////
+align-self
+属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。
+
+*/

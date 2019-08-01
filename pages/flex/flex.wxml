@@ -1,0 +1,29 @@
+<!--pages/flex/flex.wxml-->
+<text>pages/flex/flex.wxml</text>
+
+<view class="box1">
+  <block wx:for="{{[1,2,3,4,5,6,7]}}" wx:key="index">
+    <view class="item">
+      <text>{{item}}</text>
+    </view>
+  </block>
+    <view class="item100">
+      <text>{{100}}</text>
+    </view>
+</view>
+
+
+<view class="box2">
+  <view class="item">
+    <text class="textItem1">1.1</text>
+    <view class="textItem2">
+      <text class="textItem2-item">1.1.1</text>
+      <text class="textItem2-item">1.1.2</text>
+    </view>
+  </view>
+  <view class="item">
+    <view class="arrow">
+      <text>2.1</text>
+    </view>
+  </view>
+</view>
